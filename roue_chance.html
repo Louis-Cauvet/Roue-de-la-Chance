@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <title>Roue de la chance - Louis Cauvet</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="keywords" content="HTML,CSS,JS, roue de la chance">
+        <meta name="description" content="Entrainement personnel au JavaScript consistant à développer une roue de la chance, que l'utilisateur remplit lui-même ">
+        <meta name="author" content="Louis Cauvet">
+        <meta name="msapplication-TileColor" content="#da532c">
+        <meta name="theme-color" content="#ffffff">
+        
+        <link rel="stylesheet" type="text/css" href="roue_chance.css">
+        <link rel="apple-touch-icon" sizes="120x120" href="../../img/package_favicon/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="../../img/package_favicon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../../img/package_favicon/favicon-16x16.png">
+        <link rel="manifest" href="/site.webmanifest">
+        <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    </head>
+
+    <body>
+        <header>
+            <a id="retourPortfolio" href="../..">Cliquez sur ce lien pour revenir à mon portfolio</a>
+        </header>
+
+        <div id="container">
+            <div id="zoneTexte">
+                <div id="titre">Roue de la chance</div>
+                <div id="description">Vous ne savez pas quoi faire à manger ou quoi regarder à la télé ce soir ? Ca tombe bien, comme dit le proverbe "<i>le hasard fait bien les choses</i> " !</div>
+                <div id="principe">Saisissez vos options, lancez la roue et le meilleur choix s'offrira à vous !</div>
+                <div id="valeurFinale"></div>
+            </div>
+            <div id="zoneDeuxParties">
+                <div id="zoneRoue">
+                    <canvas id="roue"></canvas>
+                    <button id="boutonRoue">GO !</button>
+                    <i class="fa-solid fa-location-arrow"></i>
+                </div>
+                <div id="zoneListe">
+                    <textarea name="champsRoue" id="champPropositions" placeholder="Saisissez içi vos différentes possibilités en les séparant avec un retour à la ligne"></textarea>
+                </div>
+            </div>
+        </div>
+
+        <!-- Script qui permet d'afficher les données sous forme de graphiques -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.1/chart.min.js"></script>
+        <!-- Script qui permet d'écrire du texte par dessus les graphiques -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/chartjs-plugin-datalabels/2.2.0/chartjs-plugin-datalabels.min.js"></script>
+        <script src="roue_chance.js"></script>
+        <noscript>Désolé, votre navigateur ne prend pas en charge le Javascript</noscript>
+    </body>
+</html>

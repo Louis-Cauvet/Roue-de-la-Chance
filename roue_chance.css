@@ -1,0 +1,309 @@
+:root{
+    --blanc: #e9e7e7;
+    --orange1: #ca7e14;
+    --orange2: #fd9a0f;
+    --marron: #7b541e;
+    --violet1: #520a76;
+    --violet2: #964bbb;
+    --violet3: #bd69e7;
+    --police: 'Inter', sans-serif;
+}
+
+html{
+    min-height: 100vh;
+    height: auto;
+    min-width: 320px;
+    max-width: 100vw;
+    overflow-x: hidden;
+}
+
+body{ 
+    min-height: 100vh;
+    height: auto;
+    min-width: 320px;
+    width: 100vw;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    background-image: linear-gradient(135deg, var(--orange1), var(--orange2));
+}
+
+header{
+    min-width: 320px;
+    width: 100vw;
+    height: 40px;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0px;
+    z-index: 4;
+}
+
+#retourPortfolio{
+    color: #182c63;
+    font-size: 16px;
+    line-height: 100%;
+    text-decoration: none;
+    margin: 0px auto;
+    transition: all 0.5s linear;
+}
+
+#retourPortfolio:hover{
+    text-decoration: underline;
+}
+
+#retourPortfolio:active{
+    color: #E26506;
+}
+
+#container{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 20px;
+    width: 90%;
+    flex-grow: 2;
+    margin: 55px auto 20px;
+}
+
+#zoneTexte{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 8px;
+    width: 100%;
+    height: auto;
+    font-family: var(--police);
+    color: var(--blanc);
+}
+
+#titre{
+    width: 100%;
+    height: auto;
+    font-size: 18px;
+    line-height: 100%;
+    font-weight: bold;
+    text-align: center;
+    transition: all 0.5s linear;
+}
+
+#description, #principe{
+    font-size: 14px;
+    line-height: 120%;
+    text-align: justify;
+    transition: all 0.5s linear;
+}
+
+#valeurFinale{
+    display: none;
+    width: auto;
+    height: auto;
+    align-self: center;
+    font-family: var(--police);
+    font-size: 18px;
+    line-height: 100%;
+    font-weight: bold;
+    color: var(--violet2);
+    background-color: var(--blanc);
+    padding: 5px;
+    margin-top: 5px;
+    transition: all 0.5s linear;
+}
+
+#zoneDeuxParties{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+    flex-grow: 2;
+}
+
+#zoneRoue{
+    position: relative;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 280px;
+    width: 280px;
+    margin-right: 15px;
+}
+
+#roue{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    box-shadow: 6px 6px 7px var(--marron);
+    transition: transform 8s ease-in-out;
+}
+
+#boutonRoue{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 50px;
+    height: 50px;
+    border: none;
+    border-radius: 50%;
+    font-family: var(--police);
+    font-size: 16px;
+    line-height: 100%;
+    font-weight: bold;
+    color: var(--marron);
+    background-color: var(--blanc);
+    cursor: pointer;
+    transition: all 0.15s linear;
+}
+
+#boutonRoue:hover{
+    width: 60px;
+    height: 60px;
+    font-size: 18px;
+    box-shadow: 2px 2px 5px var(--marron);
+}
+
+.fa-location-arrow{
+    position: absolute;
+    right: -19px;
+    font-size: 35px;
+    color: var(--blanc);
+    transform: rotate(225deg);
+}
+
+#zoneListe{
+    display: flex;
+    width: 100%;
+    flex-grow: 2;
+}
+
+#champPropositions{
+    width: 100%;
+    flex-grow: 2;
+    border: none;
+    border-radius: 7px;
+    font-family: var(--police);
+    font-size: 14px;
+    line-height: 130%;
+    padding: 5px;
+    resize: none;
+}
+
+#champPropositions:focus{
+    outline: none;
+}
+
+@media only screen and (min-width: 375px) {
+    #titre{
+        font-size: 19px;
+    }
+    
+    #description, #principe{
+        font-size: 15px;
+    }
+}
+
+@media only screen and (min-width: 425px) {
+    #titre{
+        font-size: 20px;
+    }
+    
+    #description, #principe{
+        font-size: 16px;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    #retourPortfolio{
+        font-size: 18px;
+    }
+
+    #titre{
+        font-size: 22px;
+    }
+
+    #zoneDeuxParties{
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+    #zoneDeuxParties{
+        gap: 40px;
+    }
+
+    #zoneRoue{
+        height: 65vh;
+        min-height: 410px;
+        width:  410px;
+        margin-left: 5%;
+    }
+
+    #roue{
+        width: 410px;
+        height: 410px;
+    }
+
+    #zoneListe{
+        width: 40%;
+        height: 65vh;
+        min-height: 410px;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    #zoneDeuxParties{
+        gap: 140px;
+    }
+}
+
+
+@media only screen and (min-width: 1440px) {
+    #retourPortfolio{
+        font-size: 20px;
+    }
+
+    #titre{
+        font-size: 26px;
+    }
+    
+    #description, #principe{
+        font-size: 18px;
+    }
+
+    #valeurFinale{
+        font-size: 22px;
+    }
+
+    #zoneDeuxParties{
+       gap: 240px;
+    }
+
+    #zoneRoue{
+        height: 65vh;
+        width: 500px;
+        min-height: 520px;
+        margin-left: 15%;
+    }
+
+    #roue{
+        width: 600px;
+        height: 600px;
+    }
+
+    #zoneListe{
+        height: 65vh;
+        min-height: 520px;
+    }
+
+    #champPropositions{
+        font-size: 18px;
+    }
+}
